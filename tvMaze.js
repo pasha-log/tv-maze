@@ -14,7 +14,7 @@ const $searchForm = $("#search-form");
 
 async function getShowsByTerm(term) {
   // ADD: Remove placeholder & make request to TVMaze search shows API.
- const response = await axios.get(`http://api.tvmaze.com/search/shows?q=${term}`)
+ const response = await axios.get(`https://api.tvmaze.com/search/shows?q=${term}`)
  let shows = response.data.map(result => {
     let shows = result.show
     return {id : result.show.id,
@@ -40,7 +40,7 @@ image: result.show.image ? result.show.image.medium : MISSING_IMAGE_URL,
 //            quickly realises she can only begin to crack the murders and bring
 //            the culprit to justice with her former friends.</p>`,
 //       image:
-//           "http://static.tvmaze.com/uploads/images/medium_portrait/147/369403.jpg"
+//           "https://static.tvmaze.com/uploads/images/medium_portrait/147/369403.jpg"
 //     }
 //   ]
 }
